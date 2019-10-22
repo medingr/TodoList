@@ -27,7 +27,7 @@ class TodoList extends React.Component {
         <div>
             <form className="Todo" onSubmit={this.onSubmit}>
               <input value={this.state.term} onChange={this.onChange} />
-              <button>Submit</button>
+              <button>Add Todo Item</button>
             </form>
             <ListItem items={this.state.items} />
         </div>

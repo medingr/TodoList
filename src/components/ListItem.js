@@ -7,7 +7,7 @@ const ListItem = props => (
       props.items.map(
           (item, index) => 
           <li  key={index}>
-          <input type="checkbox" /><span>{item}</span>
+          <input type="checkbox" class="strikethrough" /><span>{item}</span>
           </li>)
     }
   </ul>
