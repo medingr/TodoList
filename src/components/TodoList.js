@@ -5,20 +5,20 @@ class TodoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          term: '',
+          todoTask: '',
           items: []
         };
       }
     
     onChange = (event) => {
-        this.setState({term: event.target.value});
+        this.setState({todoTask: event.target.value});
     }
 
     onSubmit = (event) => {
         event.preventDefault()
         this.setState({
-          term: '',
-          items: [...this.state.items, this.state.term]
+          todoTask: '',
+          items: [...this.state.items, this.state.todoTask]
         });
     }
 
@@ -26,7 +26,7 @@ class TodoList extends React.Component {
         return (
         <div>
             <form className="Todo" onSubmit={this.onSubmit}>
-              <input value={this.state.term} onChange={this.onChange} />
+              <input value={this.state.todoTask} onChange={this.onChange} />
               <button>Add Todo Item</button>
             </form>
             <ListItem items={this.state.items} />

@@ -3,5 +3,6 @@
 }
 
 .strikethrough:checked + span{
+    color:black;
     text-decoration:line-through
 }
